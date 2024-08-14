@@ -1,32 +1,38 @@
 #!/usr/bin/env node
 
-import { Command, Argument, program } from "commander";
-import { input } from "@inquirer/prompts";
+import { select, Separator } from '@inquirer/prompts'
+import { create } from 'domain'
+import fs from 'fs'
+import { changeName, createPkg } from './scaffolds/npm-library/npm-package.js'
 
-const answer = await input({ message: "Enter your name" });
+const selected = await select({
+  message: 'Select a package manager',
+  choices: [
+    {
+      name: 'npm',
+      value: 'npm',
+      description: 'npm is the most popular package manager',
+    },
+    {
+      name: 'yarn',
+      value: 'yarn',
+      description: 'yarn is an awesome package manager',
+    },
+    new Separator(),
+    {
+      name: 'jspm',
+      value: 'jspm',
+      disabled: true,
+    },
+    {
+      name: 'pnpm',
+      value: 'pnpm',
+      disabled: '(pnpm is not available)',
+    },
+  ],
+})
 
-console.log(answer);
-
-function collectRepeatable(value, previous) {
-  if (previous._isDefault) {
-    return [value];
-  }
-  previous.push(value);
-  return previous;
+if (selected === 'npm') {
+  await createPkg('npm-library')
+  await changeName('npm-library')
 }
-
-function defaultRepeatable(array) {
-  array._isDefault = true;
-  return array;
-}
-
-//...
-program
-  //...
-  .option(
-    "--exclude <file>",
-    "excludes files in input directory by file or pattern",
-    collectRepeatable,
-    defaultRepeatable([".gitignore", "codeswing.json"])
-  );
-//...

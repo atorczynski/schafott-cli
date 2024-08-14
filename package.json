@@ -1,0 +1,29 @@
+{
+  "name": "schafott-cli",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "bin": {
+    "schafott": "dist/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "link-cli": "pnpm remove -g schafott-cli && pnpm link -g",
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^22.2.0",
+    "rollup": "^4.20.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "commander": "^12.1.0"
+  }
+}

@@ -1,26 +1,46 @@
 {
-    "name": "scaf-placeholder",
-    "version": "1.0.0",
+    "name": "ranuser",
+    "version": "4.0.12",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "types": "./dist/types/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "rollup -c",
-        "watch": "rollup -c -w"
+        "dev": "rollup -c -w",
+        "start": "nodemon --exec ts-node src/index.ts",
+        "np": "npm run build && np --no-tests",
+        "semantic-release": "semantic-release"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "description": "",
     "devDependencies": {
-        "@eslint/js": "^9.9.0",
+        "@babel/cli": "^7.24.8",
+        "@babel/core": "^7.24.9",
+        "@babel/preset-env": "^7.19.4",
+        "@babel/preset-typescript": "^7.24.7",
+        "@eslint/js": "^9.7.0",
+        "@rollup/plugin-terser": "0.4.4",
         "@rollup/plugin-typescript": "^11.1.6",
-        "@types/node": "^22.2.0",
-        "eslint": "^9.9.0",
-        "globals": "^15.9.0",
-        "prettier": "3.3.3",
-        "rollup": "^4.20.0",
-        "typescript": "^5.5.4",
-        "typescript-eslint": "^8.1.0"
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/exec": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@types/node": "^20.14.11",
+        "eslint": "^9.7.0",
+        "globals": "^15.8.0",
+        "nodemon": "^3.1.4",
+        "np": "10.0.7",
+        "prettier": "^3.3.3",
+        "prettier-eslint": "^16.3.0",
+        "rollup": "^4.19.0",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "semantic-release": "^24.0.0",
+        "ts-node": "^10.9.2",
+        "tslib": "^2.6.3",
+        "typescript": "^5.5.4"
     }
 }

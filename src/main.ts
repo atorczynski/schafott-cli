@@ -5,6 +5,8 @@ import pkg from './scaffolds/npm-library/package.scaffold.json'
 import fs from 'fs'
 import chalk from 'chalk'
 
+const log = console.log
+
 const selected = await select({
   message: 'Package Type',
   choices: [
@@ -15,17 +17,19 @@ const selected = await select({
 })
 
 const currentPathContent = await fs.readdirSync('.')
-console.log(currentPathContent)
+console.log(currentPathContent.length)
 if (currentPathContent.length > 0) {
-  chalk.red('Current directory is not empty')
+  log(chalk.red('Current directory is not empty'))
   const projectName = await input({
-    message: 'Project Name',
+    message: 'Project-Folder Name',
   })
   if (!projectName) {
-    console.log('Project Name is required')
+    log(chalk.red('Project-Folder Name is required'))
     process.exit(1)
   }
   fs.mkdirSync(projectName)
+  console.log('Project directory created')
+  process.chdir(projectName)
 }
 
 if (selected === 'cancel') {

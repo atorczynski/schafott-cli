@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "link-cli": "pnpm remove -g schafott-cli && pnpm link -g",
+    "unlink-cli": "pnpm remove schafott-cli -g",
     "build": "rollup -c",
     "watch": "rollup -c -w"
   },

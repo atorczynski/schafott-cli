@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/atorczynski/schafott-cli/compare/v1.0.4...v1.0.5) (2024-08-16)
+
+
+### Bug Fixes
+
+* **lint:** Update ts.config output target. ([2e3faae](https://github.com/atorczynski/schafott-cli/commit/2e3faae8a42db3749fe3b6a64f199aa9f24b3d26))
+
 ## [1.0.4](https://github.com/atorczynski/schafott-cli/compare/v1.0.3...v1.0.4) (2024-08-16)
 
 

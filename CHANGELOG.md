@@ -1,5 +1,11 @@
 ## [1.0.5](https://github.com/atorczynski/schafott-cli/compare/v1.0.4...v1.0.5) (2024-08-16)
 
+## 1.0.10
+
+### Patch Changes
+
+- 90b9802: Build was not present.
+
 ## 1.0.9
 
 ### Patch Changes

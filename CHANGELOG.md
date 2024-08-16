@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/atorczynski/schafott-cli/compare/v1.0.3...v1.0.4) (2024-08-16)
+
+
+### Bug Fixes
+
+* **dev-mode:** Update rollup.config.scaffold.ts and write.ts files ([0eb5161](https://github.com/atorczynski/schafott-cli/commit/0eb51611add6be32a93bbe9f0df5eef0fd26c5a5))
+
 ## [1.0.3](https://github.com/atorczynski/schafott-cli/compare/v1.0.2...v1.0.3) (2024-08-16)
 
 

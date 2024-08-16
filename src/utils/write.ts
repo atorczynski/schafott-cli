@@ -56,7 +56,7 @@ export const createDefaultFiles = async () => {
   }
 
   const spinner = ora('Creating files \n').start();
-  await writeFile('src/index.js', '');
+  await writeFile('src/index.ts', '');
   if (usePrettier === 'yes') await writeFile('.prettierrc', JSON.stringify(prettierlib, null, 2));
   if (useTests === 'yes') await writeFile('src/index.test.js', '');
   await writeFile('.gitignore', gitignore);

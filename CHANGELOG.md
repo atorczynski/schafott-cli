@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/atorczynski/schafott-cli/compare/v1.0.0...v1.0.1) (2024-08-16)
+
+
+### Bug Fixes
+
+* **build:** Update package.json. ([8b00be1](https://github.com/atorczynski/schafott-cli/commit/8b00be1d8f68e501e6428872fe8fcb52f4648212))
+
 # 1.0.0 (2024-08-16)
 
 

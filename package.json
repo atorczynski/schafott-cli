@@ -7,14 +7,27 @@
   },
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "link-cli": "pnpm remove -g schafott-cli && pnpm link -g",
     "build": "rollup -c",
     "watch": "rollup -c -w"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "schafott",
+    "schafott-cli",
+    "scaffolding",
+    "scaffold",
+    "generator",
+    "cli-generator",
+    "cli-scaffolding",
+    "cli-scaffold"
+  ],
+  "author": "Artur Torczynski",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.9.0",

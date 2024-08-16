@@ -5,7 +5,7 @@ import { input, select, Separator } from '@inquirer/prompts';
 import fs from 'fs';
 import chalk from 'chalk';
 import { activatePathLib } from './utils/paths/lib.path.js';
-import { log } from './utils/helpers.ts';
+import { log } from './utils/helpers';
 
 const selected = await select({
   message: 'Package Type',

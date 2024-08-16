@@ -2,8 +2,8 @@ import fs from 'fs/promises';
 import chalk from 'chalk';
 import ora from 'ora';
 import { input, select } from '@inquirer/prompts';
-import { log } from './helpers.ts';
-import { gitignore, lintConfig, prettierConfig } from '../scaffolds/globals/index.ts';
+import { log } from './helpers';
+import { gitignore, lintConfig, prettierConfig } from '../scaffolds/globals/index';
 
 export const writeFile = async (path: string, data: string) => {
   await fs

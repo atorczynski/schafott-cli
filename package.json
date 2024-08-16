@@ -1,6 +1,6 @@
 {
   "name": "schafott-cli",
-  "version": "1.0.11",
+  "version": "1.0.10",
   "main": "dist/index.js",
   "bin": {
     "schafott": "dist/index.js"

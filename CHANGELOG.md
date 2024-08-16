@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 23c9ba2: no
+
+## 1.0.11
+
+### Patch Changes
+
 - 3003329: Adjust workflow
 
 ## 1.0.10

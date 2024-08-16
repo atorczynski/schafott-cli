@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/atorczynski/schafott-cli/compare/v1.0.2...v1.0.3) (2024-08-16)
+
+
+### Bug Fixes
+
+* **rollup.config.js:** Convert rollup.config.scaffold.js to TypeScript and import contents. ([699d07e](https://github.com/atorczynski/schafott-cli/commit/699d07e2ffb7e6be793715538ea82daa220a23cb))
+
 ## [1.0.2](https://github.com/atorczynski/schafott-cli/compare/v1.0.1...v1.0.2) (2024-08-16)
 
 

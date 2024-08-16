@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/atorczynski/schafott-cli/compare/v1.0.1...v1.0.2) (2024-08-16)
+
+
+### Bug Fixes
+
+* **structure:** Update .gitignore and .npmignore files ([5ce5b28](https://github.com/atorczynski/schafott-cli/commit/5ce5b2814abdd23bb51ae91425e3142ea74f82f2))
+
 ## [1.0.1](https://github.com/atorczynski/schafott-cli/compare/v1.0.0...v1.0.1) (2024-08-16)
 
 

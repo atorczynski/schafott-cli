@@ -1,10 +1,9 @@
 import fs from 'fs/promises';
 import chalk from 'chalk';
 import ora from 'ora';
-import prettierlib from '../scaffolds/npm-library/prettier.scaffold.json';
 import { input, select } from '@inquirer/prompts';
 import { log } from './helpers.ts';
-import { gitignore, lintConfig } from '../scaffolds/globals/index.ts';
+import { gitignore, lintConfig, prettierConfig } from '../scaffolds/globals/index.ts';
 
 export const writeFile = async (path: string, data: string) => {
   await fs
@@ -57,7 +56,8 @@ export const createDefaultFiles = async () => {
 
   const spinner = ora('Creating files \n').start();
   await writeFile('src/index.ts', '');
-  if (usePrettier === 'yes') await writeFile('.prettierrc', JSON.stringify(prettierlib, null, 2));
+  if (usePrettier === 'yes')
+    await writeFile('.prettierrc', JSON.stringify(prettierConfig, null, 2));
   if (useTests === 'yes') await writeFile('src/index.test.js', '');
   await writeFile('.gitignore', gitignore);
   await writeFile('README.md', '# Project Title\n\nProject Description');

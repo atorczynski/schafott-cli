@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2023",
-    "module": "esnext",
+    "target": "ES2015",
+    "module": "ES2015",
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
@@ -9,8 +9,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
     "forceConsistentCasingInFileNames": true,
     "removeComments": false
   },

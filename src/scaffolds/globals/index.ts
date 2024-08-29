@@ -1,5 +1,5 @@
-import { lintConfig } from './eslint.scaffold.ts';
-import { gitignore } from './gitignore.scaffold.ts';
-import { prettierConfig } from './prettier.scaffold.ts';
+import { lintConfig } from './eslint.scaffold';
+import { gitignore } from './gitignore.scaffold';
+import { prettierConfig } from './prettier.scaffold';
 
 export { lintConfig, gitignore, prettierConfig };

@@ -6,7 +6,7 @@ export default {
   input: 'src/main.ts',
   output: {
     file: 'dist/index.js',
-    format: 'esm',
+    format: 'esm'
   },
-  plugins: [typescript(), json(), url()],
+  plugins: [typescript(), json(), url()]
 }

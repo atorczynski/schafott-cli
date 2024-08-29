@@ -30,6 +30,9 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: pnpm audit signatures
 
+      - name: Check for code-style errors
+        run: pnpm test
+
       - name: Build
         run: pnpm build
 

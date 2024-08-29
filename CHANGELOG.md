@@ -1,5 +1,11 @@
 ## [1.0.5](https://github.com/atorczynski/schafott-cli/compare/v1.0.4...v1.0.5) (2024-08-16)
 
+## 1.0.13
+
+### Patch Changes
+
+- 24d7c85: Cleaning up this mess of a learning experience step-by-step.
+
 ## 1.0.12
 
 ### Patch Changes

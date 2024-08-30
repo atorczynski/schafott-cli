@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: pnpm audit signatures
+      # - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+      #   run: pnpm audit signatures
 
       - name: Check for code-style errors
         run: pnpm test

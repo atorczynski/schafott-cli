@@ -2,4 +2,5 @@
 'schafott-cli': patch
 ---
 
-fix: Reomved syntax error after build.
+fix: Removed syntax error after build. User were unable to serve the the lib-folder in dev mode due to a syntax error in the build script.
+---

@@ -1,10 +1,8 @@
-## [1.0.5](https://github.com/atorczynski/schafott-cli/compare/v1.0.4...v1.0.5) (2024-08-16)
-
 ## 1.0.14
 
 ### Patch Changes
 
-- ## d524b7d: fix: Removed syntax error after build. User were unable to serve the the lib-folder in dev mode due to a syntax error in the build script.
+- d524b7d: fix: Removed syntax error after build. User were unable to serve the the lib-folder in dev mode due to a syntax error in the build script.
 
 ## 1.0.13
 

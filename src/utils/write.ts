@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import ora from 'ora';
 import { input, select } from '@inquirer/prompts';
 import { log } from './helpers';
-import { gitignore, lintConfig, prettierConfig } from '../scaffolds/globals/index';
+import { gitignore, prettierConfig } from '../scaffolds/globals/index';
 
 export const writeFile = async (path: string, data: string) => {
   await fs
@@ -23,15 +23,6 @@ export const createDefaultFiles = async () => {
     default: 'MIT',
   });
 
-  const useTests = await select({
-    message: 'Use Tests',
-    default: 'yes',
-    choices: [
-      { name: 'Yes', value: 'yes' },
-      { name: 'No', value: 'no' },
-    ],
-  });
-
   const usePrettier = await select({
     message: 'Use Prettier',
     default: 'yes',
@@ -41,26 +32,10 @@ export const createDefaultFiles = async () => {
     ],
   });
 
-  const useLint = await select({
-    message: 'Use Lint',
-    default: 'yes',
-    choices: [
-      { name: 'Yes', value: 'yes' },
-      { name: 'No', value: 'no' },
-    ],
-  });
-
-  if (useLint === 'yes') {
-    await writeFile('eslint.config.js', lintConfig);
-  }
-
   const spinner = ora('Creating files \n').start();
-  await writeFile('src/index.ts', '');
   if (usePrettier === 'yes')
     await writeFile('.prettierrc', JSON.stringify(prettierConfig, null, 2));
-  if (useTests === 'yes') await writeFile('src/index.test.js', '');
   await writeFile('.gitignore', gitignore);
-  await writeFile('README.md', '# Project Title\n\nProject Description');
   await writeFile('LICENSE', license);
   spinner.succeed('Files created');
 };

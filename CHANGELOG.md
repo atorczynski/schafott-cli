@@ -1,5 +1,11 @@
 ## 1.0.14
 
+## 1.0.16
+
+### Patch Changes
+
+- 36b7a9c: Rework journey to be mire "npm" like. Added in changesets as option.
+
 ## 1.0.15
 
 ### Patch Changes

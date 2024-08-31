@@ -21,13 +21,28 @@ export const prompts = async () => {
     default: '.',
   });
 
+  const projectName = await input({
+    message: 'Project-Folder Name',
+  });
+
+  const version = await input({
+    message: 'Version',
+    default: '0.0.1',
+  });
+
+  const description = await input({
+    message: 'Description',
+    default: 'Your Description',
+  });
+
+  const author = await input({
+    message: 'Author',
+    default: 'Your Name',
+  });
+
   const licence = await input({
     message: 'Licence',
     default: 'MIT',
-  });
-
-  const projectName = await input({
-    message: 'Project-Folder Name',
   });
 
   if (!projectName) {
@@ -43,5 +58,14 @@ export const prompts = async () => {
     ],
   });
 
-  return { selected, targetDirectory, projectName, projectFeatures, licence };
+  return {
+    selected,
+    targetDirectory,
+    projectName,
+    projectFeatures,
+    licence,
+    version,
+    description,
+    author,
+  };
 };

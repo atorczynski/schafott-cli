@@ -1,0 +1,47 @@
+import { checkbox, input, select, Separator } from '@inquirer/prompts';
+import chalk from 'chalk';
+import { log } from './utils/helpers';
+
+export const prompts = async () => {
+  const selected = await select({
+    message: 'Package Type',
+    choices: [
+      { name: 'JS-Library', value: 'lib' },
+      new Separator(),
+      { name: 'cancel', value: 'cancel' },
+    ],
+  });
+
+  if (selected === 'cancel') {
+    process.exit(0);
+  }
+
+  const targetDirectory = await input({
+    message: 'Where do you want to create the project?',
+    default: '.',
+  });
+
+  const licence = await input({
+    message: 'Licence',
+    default: 'MIT',
+  });
+
+  const projectName = await input({
+    message: 'Project-Folder Name',
+  });
+
+  if (!projectName) {
+    log(chalk.red('Project-Folder Name is required'));
+    process.exit(1);
+  }
+
+  const projectFeatures = await checkbox({
+    message: 'Select Features',
+    choices: [
+      { name: 'Prettier', value: 'prettier' },
+      { name: 'Changesets', value: 'changesets' },
+    ],
+  });
+
+  return { selected, targetDirectory, projectName, projectFeatures, licence };
+};

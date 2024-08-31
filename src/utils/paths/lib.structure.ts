@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { writeFile } from '../write';
+import { writeFile } from '../writeHelpers';
 import { rollupConfigLib } from '../../scaffolds/npm-library/rollup.config.scaffold';
 
 export const createFiles = async (tsConfigScaffold: object, pkgJson: object) => {

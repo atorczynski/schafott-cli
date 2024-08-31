@@ -1,5 +1,11 @@
 ## 1.0.14
 
+## 1.0.15
+
+### Patch Changes
+
+- 6b4cc79: Removed some unstable options in selection. Will be intruduced in a later stage.
+
 ### Patch Changes
 
 - d524b7d: fix: Removed syntax error after build. User were unable to serve the the lib-folder in dev mode due to a syntax error in the build script.

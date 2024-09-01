@@ -1,5 +1,11 @@
 ## 1.0.14
 
+## 1.0.17
+
+### Patch Changes
+
+- 73210a8: Add eslint config generation for nodejs projects.
+
 ## 1.0.16
 
 ### Patch Changes

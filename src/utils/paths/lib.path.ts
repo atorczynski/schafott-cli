@@ -16,6 +16,7 @@ export const generateLibFiles = async (options: Options) => {
   pkg.devDependencies = {
     ...pkg.devDependencies,
     ...(projectFeatures.includes('changesets') && { '@changesets/cli': '^2.27.7' }),
+    ...(projectFeatures.includes('prettier') && { prettier: '^3.3.3' }),
   };
 
   await createLibFiles(tsConfigJson, pkgJson);

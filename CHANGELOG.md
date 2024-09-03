@@ -1,5 +1,11 @@
 ## 1.0.17
 
+## 1.0.18
+
+### Patch Changes
+
+- 8dbc7d6: Install Deps step is now optional.
+
 ### Patch Changes
 
 - 73210a8: Add eslint config generation for nodejs projects.

@@ -31,10 +31,8 @@ const promptValues = {
 const projectPath = path.join(targetDirectory, projectName);
 
 await validatePath(path.join(process.cwd(), projectPath));
-
 await writeBaseFiles({ ...promptValues });
 
 if (selected === 'lib') {
-  console.log('Selected Values for Library:', promptValues);
   await generateLibFiles({ ...promptValues });
 }

@@ -2,6 +2,7 @@ import { select } from '@inquirer/prompts';
 import fs from 'fs/promises';
 import chalk from 'chalk';
 import { exec } from 'child_process';
+import ora from 'ora';
 
 export const log = console.log;
 
@@ -47,15 +48,17 @@ export const installDeps = async () => {
   });
 
   if (installDeps === 'yes') {
-    exec('npm install', (error, stdout) => {
+    const spinner = ora('Installing dependencies').start();
+
+    exec('npm install', (error) => {
       if (error) {
         console.error(`exec error: ${error}`);
+        spinner.fail('Failed to install dependencies');
         return;
       }
-      console.log(`stdout: ${stdout}`);
+      spinner.succeed('Dependencies installed');
     });
-  }
-  if (installDeps === 'no') {
+  } else {
     log(chalk.green('Done, run `npm install` to install dependencies'));
   }
 };

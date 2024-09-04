@@ -26,7 +26,6 @@ export const writeBaseFiles = async (options: Options) => {
         console.error(`Changesets stderr: ${stderr}`);
         return;
       }
-      console.log(`Changesets stdout: ${stdout}`);
     });
   }
 };

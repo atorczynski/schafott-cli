@@ -1,5 +1,11 @@
 ## 1.0.17
 
+## 1.0.19
+
+### Patch Changes
+
+- 01d732f: fix: Add missing .gitignore file.
+
 ## 1.0.18
 
 ### Patch Changes

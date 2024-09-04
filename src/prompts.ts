@@ -55,6 +55,7 @@ export const prompts = async () => {
     choices: [
       { name: 'Prettier', value: 'prettier' },
       { name: 'Changesets', value: 'changesets' },
+      { name: 'Jest', value: 'jest' },
     ],
   });
 

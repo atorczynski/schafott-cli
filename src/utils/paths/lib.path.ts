@@ -13,10 +13,17 @@ export const generateLibFiles = async (options: Options) => {
   pkg.license = licence;
   pkg.author = author;
   pkg.description = description;
+  pkg.scripts = {
+    ...pkg.scripts,
+    ...(projectFeatures.includes('jest') && { test: 'jest' }),
+  };
   pkg.devDependencies = {
     ...pkg.devDependencies,
     ...(projectFeatures.includes('changesets') && { '@changesets/cli': '^2.27.7' }),
     ...(projectFeatures.includes('prettier') && { prettier: '^3.3.3' }),
+    ...(projectFeatures.includes('jest') && { jest: '^29.7.0' }),
+    ...(projectFeatures.includes('jest') && { '@types/jest': '^29.5.12' }),
+    ...(projectFeatures.includes('jest') && { 'ts-jest': '^29.2.5' }),
   };
 
   await createLibFiles(tsConfigJson, pkgJson);

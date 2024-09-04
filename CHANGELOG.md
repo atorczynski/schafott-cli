@@ -1,5 +1,16 @@
 ## 1.0.17
 
+## 1.1.0
+
+### Minor Changes
+
+- b13ebe9: feat: Add jest as project feature for js-libs.
+
+### Patch Changes
+
+- 594939d: fix: Stdout is now not called while install.
+- 594939d: feat: Install process now shows a indicator and success message after confirming the propt to install with npm.
+
 ## 1.0.19
 
 ### Patch Changes

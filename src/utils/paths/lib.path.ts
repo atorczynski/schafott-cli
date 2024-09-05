@@ -9,6 +9,7 @@ export const generateLibFiles = async (options: Options) => {
 
   const pkg = pkgJson;
   pkg.name = projectName;
+  pkg.dependencies = {};
   pkg.version = version;
   pkg.license = licence;
   pkg.author = author;
@@ -26,7 +27,8 @@ export const generateLibFiles = async (options: Options) => {
     ...(projectFeatures.includes('jest') && { 'ts-jest': '^29.2.5' }),
   };
 
-  await createLibFiles(tsConfigJson, pkgJson);
+  const deps = { ...pkg.devDependencies, ...pkg.dependencies };
 
-  await installDeps();
+  await installDeps(deps);
+  await createLibFiles(tsConfigJson, pkgJson);
 };

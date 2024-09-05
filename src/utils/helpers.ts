@@ -6,6 +6,10 @@ import ora from 'ora';
 
 export const log = console.log;
 
+interface Dependencies {
+  [key: string]: string;
+}
+
 export const validatePath = async (projectPath: string) => {
   if (
     await fs
@@ -37,7 +41,8 @@ export const validatePath = async (projectPath: string) => {
   await process.chdir(projectPath);
 };
 
-export const installDeps = async () => {
+export const installDeps = async (deps: Dependencies) => {
+  const hasChangesets = deps['@changesets/cli'];
   const installDeps = await select({
     message: 'Install dependencies using npm?',
     choices: [
@@ -56,7 +61,9 @@ export const installDeps = async () => {
         spinner.fail('Failed to install dependencies');
         return;
       }
-      spinner.succeed('Dependencies installed');
+      spinner.succeed(
+        `Dependencies installed. ${hasChangesets ? 'Run `changeset init` to setup changesets' : ''}`,
+      );
     });
   } else {
     log(chalk.green('Done, run `npm install` to install dependencies'));

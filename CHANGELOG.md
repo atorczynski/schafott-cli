@@ -1,4 +1,8 @@
+## 1.1.1
 
+### Patch Changes
+
+- 4efafb3: fix: Changeset error occuring before install fixed. This was caused by not having the dep. of teh cli yet installed. User has to init changesets manually.
 
 ## 1.1.0
 

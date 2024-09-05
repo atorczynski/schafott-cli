@@ -42,7 +42,7 @@ Generates a scaffold for a NodeJS / Browser Utility Library.
 - [x] [ESLint](https://github.com/eslint/eslint) (Code Linter)
 - [x] [Standard](https://github.com/standard/standard) (Code Style)
 - [x] [Changesets](https://github.com/changesets/changesets) (Versioning)
-- [ ] [Jest](https://github.com/jestjs/jest) (Testing)
+- [x] [Jest](https://github.com/jestjs/jest) (Testing)
 
 Please note that the generated scaffold is a starting point and should be adjusted to your needs.
 

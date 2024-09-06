@@ -5,6 +5,13 @@
   "bin": {
     "schafott": "dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atorczynski/schafott-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atorczynski/schafott-cli/issues"
+  },
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [

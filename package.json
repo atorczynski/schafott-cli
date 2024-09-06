@@ -2,6 +2,9 @@
   "name": "schafott-cli",
   "version": "1.1.1",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=16"
+  },
   "bin": {
     "schafott": "dist/index.js"
   },

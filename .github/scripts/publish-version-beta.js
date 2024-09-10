@@ -1,3 +1,5 @@
+// highly inspired by "wrangler" project (CLOUDFLARE) and "shadcn" project (SHADCN)
+
 import fs from 'fs';
 import { exec } from 'child_process';
 

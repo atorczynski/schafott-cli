@@ -69,3 +69,29 @@ export const installDeps = async (deps: Dependencies) => {
     log(chalk.green('Done, run `npm install` to install dependencies'));
   }
 };
+
+export const initGit = async () => {
+  const initGit = await select({
+    message: 'Initialize git repository?',
+    choices: [
+      { name: 'No', value: 'no' },
+      { name: 'Yes', value: 'yes' },
+    ],
+    default: 'yes',
+  });
+
+  if (initGit === 'yes') {
+    const spinner = ora('Initializing git repository').start();
+
+    exec('git init', (error) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        spinner.fail('Failed to initialize git repository');
+        return;
+      }
+      spinner.succeed('Git repository initialized');
+    });
+  } else {
+    log(chalk.green('Git repository not initialized'));
+  }
+};

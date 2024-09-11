@@ -3,14 +3,12 @@
 import fs from 'fs';
 import { exec } from 'child_process';
 
-// Read package.json
-exec('pwd', (error, stdout) => {
-  if (error) {
-    console.error(error);
-    process.exit(1);
-  }
-  console.log(stdout);
-});
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+
+if (!isGitHubActions) {
+  console.error('This script is only meant to be run in GitHub Actions CI');
+  process.exit(1);
+}
 
 const pkgJsonPath = './package.json';
 

@@ -39,7 +39,7 @@ jobs:
 
 
       - name: Modify package.json version
-        run: node .github/version-script-beta.js
+        run: node .github/version-beta.js
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

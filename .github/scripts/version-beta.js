@@ -12,7 +12,7 @@ exec('pwd', (error, stdout) => {
   console.log(stdout);
 });
 
-const pkgJsonPath = '../../package.json';
+const pkgJsonPath = './package.json';
 
 try {
   const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8'));

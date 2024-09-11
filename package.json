@@ -26,7 +26,8 @@
     "unlink-cli": "pnpm remove schafott-cli -g",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "publish-package": "pnpm changeset publish"
+    "publish-package": "pnpm changeset publish",
+    "publish-beta": "pnpm changeset version beta && pnpm publish --tag beta"
   },
   "keywords": [
     "cli",

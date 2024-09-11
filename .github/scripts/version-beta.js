@@ -23,7 +23,6 @@ try {
     const betaVersion = `${pkgJson.version}-beta.${commitHash}`;
     pkgJson.version = betaVersion;
     fs.writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2));
-    console.log(pkgJson.version);
   });
 } catch (error) {
   console.error(error);

@@ -4,6 +4,14 @@ import fs from 'fs';
 import { exec } from 'child_process';
 
 // Read package.json
+exec('pwd', (error, stdout) => {
+  if (error) {
+    console.error(error);
+    process.exit(1);
+  }
+  console.log(stdout);
+});
+
 const pkgJsonPath = '../../package.json';
 
 try {

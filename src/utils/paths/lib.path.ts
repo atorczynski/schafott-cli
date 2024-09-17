@@ -1,5 +1,5 @@
-import pkgJson from '../../scaffolds/npm-library/package.scaffold.json';
-import tsConfigJson from '../../scaffolds/npm-library/tsconfig.scaffold.json';
+import pkgJson from '../../scaffolds/npm-library/package.js-lib.scaffold.json';
+import tsConfigJson from '../../scaffolds/npm-library/tsconfig.jslib.scaffold.json';
 import { Options } from '../../scaffolds/types';
 import { installDeps } from '../helpers';
 import { createLibFiles } from './lib.structure.js';

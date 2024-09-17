@@ -1,7 +1,7 @@
-import pkgJson from '../../scaffolds/npm-library/package.js-lib.scaffold.json';
-import tsConfigJson from '../../scaffolds/npm-library/tsconfig.jslib.scaffold.json';
-import { Options } from '../../scaffolds/types';
-import { installDeps } from '../helpers';
+import pkgJson from '../../../scaffolds/npm-library/package.js-lib.scaffold.json';
+import tsConfigJson from '../../../scaffolds/npm-library/tsconfig.js-lib.scaffold.json';
+import { Options } from '../../../scaffolds/types';
+import { installDeps } from '../../helpers';
 import { createLibFiles } from './lib.structure.js';
 
 export const generateLibFiles = async (options: Options) => {

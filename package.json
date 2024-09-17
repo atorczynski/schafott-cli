@@ -50,13 +50,14 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@rollup/plugin-url": "^8.0.2",
     "@types/node": "^22.2.0",
+    "@types/react": "^18.3.7",
     "eslint": "^9.9.0",
     "globals": "^15.9.0",
     "prettier": "3.3.3",
     "rollup": "^4.20.0",
     "standard": "17.1.0",
-    "typescript": "^5.5.4",
     "tslib": "^2.7.0",
+    "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
   },
   "dependencies": {

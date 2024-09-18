@@ -13,3 +13,15 @@ export const writeFile = async (path: string, data: string) => {
       process.exit(1);
     });
 };
+
+export const createDirectory = async (path: string) => {
+  await fs
+    .mkdir(path, { recursive: true })
+    .then(() => {
+      log(chalk.green(`${path} created`));
+    })
+    .catch((err) => {
+      log(chalk.red(err));
+      process.exit(1);
+    });
+};

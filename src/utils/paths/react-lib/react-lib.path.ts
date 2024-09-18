@@ -23,6 +23,6 @@ export const generateReactFiles = async (options: Options) => {
 
   const deps = { ...pkg.devDependencies, ...pkg.dependencies };
 
-  await installDeps(deps);
   await createReactFiles(tsConfigJson, pkgJson);
+  await installDeps(deps);
 };

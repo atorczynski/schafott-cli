@@ -1,5 +1,11 @@
 ## 1.1.1
 
+## 1.2.0
+
+### Minor Changes
+
+- decb046: Add React-lib support.
+
 ### Patch Changes
 
 - 4efafb3: fix: Changeset error occuring before install fixed. This was caused by not having the dep. of teh cli yet installed. User has to init changesets manually.

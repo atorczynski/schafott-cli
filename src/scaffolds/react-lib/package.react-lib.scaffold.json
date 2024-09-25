@@ -1,0 +1,46 @@
+{
+    "name": "test5",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "./dist/types/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w"
+    },
+    "keywords": [],
+    "author": "Your Name",
+    "license": "MIT",
+    "description": "Your Description",
+    "dependencies": {},
+    "peerDependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.24.8",
+        "@babel/core": "^7.24.9",
+        "@babel/preset-env": "^7.19.4",
+        "@babel/preset-typescript": "^7.24.7",
+        "@babel/preset-react": "^7.24.7",
+        "@rollup/plugin-babel": "6.0.4",
+        "@rollup/plugin-node-resolve": "15.2.3",
+        "rollup-plugin-peer-deps-external": "2.2.4",
+        "@rollup/plugin-commonjs": "^26.0.1",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^11.1.6",
+        "@types/node": "^20.14.11",
+        "eslint": "^9.7.0",
+        "globals": "^15.8.0",
+        "prettier": "^3.3.3",
+        "prettier-eslint": "^16.3.0",
+        "rollup": "^4.19.0",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "ts-node": "^10.9.2",
+        "tslib": "^2.6.3",
+        "typescript": "^5.5.4"
+    }
+}

@@ -7,6 +7,7 @@ export const prompts = async () => {
     message: 'Package Type',
     choices: [
       { name: 'JS-Library', value: 'lib' },
+      { name: 'React-Component-Library', value: 'react-lib' },
       new Separator(),
       { name: 'cancel', value: 'cancel' },
     ],

@@ -50,10 +50,15 @@ Please note that the generated scaffold is a starting point and should be adjust
 - `dev` - Starts the development server
 - `build` - Builds the library
 
-## React Component Library (WIP) - no release yet
+## React Component Library (WIP - Features not yet tested)
 Generates a scaffold for a React Component Library.
 
 ### Features
+- [x] [TypeScript](https://github.com/microsoft/TypeScript) (Language)
+- [x] [Prettier](https://github.com/prettier/prettier) (Code Formatter)
+- [x] [ESLint](https://github.com/eslint/eslint) (Code Linter)
+- [x] [Changesets](https://github.com/changesets/changesets) (Versioning)
+- [ ] [Storybook](https://github.com/storybookjs/storybook)  (Component Development)
 
 ### Predefined Scripts
 - `dev` - Starts the development server

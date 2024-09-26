@@ -6,7 +6,7 @@ export const writeFile = async (path: string, data: string) => {
   await fs
     .writeFile(path, data)
     .then(() => {
-      log(chalk.green(`${path} created`));
+      log(chalk.green('CREATED') + ` ${path}`);
     })
     .catch((err) => {
       log(chalk.red(err));
@@ -18,7 +18,7 @@ export const createDirectory = async (path: string) => {
   await fs
     .mkdir(path, { recursive: true })
     .then(() => {
-      log(chalk.green(`${path} created`));
+      log(chalk.green('CREATED DIR') + ` ${path}`);
     })
     .catch((err) => {
       log(chalk.red(err));

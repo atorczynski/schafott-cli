@@ -1,6 +1,8 @@
-export const buttonExampleComponent = `import React from 'react';
+export const buttonExampleComponent = `//This is a simple Button Component. Use this as a starting point for your own components.
 
-interface ButtonProps {
+import React from 'react';
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
 }
 

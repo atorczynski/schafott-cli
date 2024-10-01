@@ -19,6 +19,9 @@ export const generateReactFiles = async (options: Options) => {
   };
   pkg.devDependencies = {
     ...pkg.devDependencies,
+    ...(projectFeatures.includes('jest') && { jest: '^29.7.0' }),
+    ...(projectFeatures.includes('jest') && { '@types/jest': '^29.5.12' }),
+    ...(projectFeatures.includes('jest') && { 'ts-jest': '^29.2.5' }),
   };
 
   const deps = { ...pkg.devDependencies, ...pkg.dependencies };

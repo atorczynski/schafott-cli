@@ -1,5 +1,11 @@
 ## 1.1.1
 
+## 1.2.1
+
+### Patch Changes
+
+- f13398d: Add types for jest testing and edit button component.
+
 ## 1.2.0
 
 ### Minor Changes

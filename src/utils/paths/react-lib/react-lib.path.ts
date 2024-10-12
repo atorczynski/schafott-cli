@@ -16,12 +16,17 @@ export const generateReactFiles = async (options: Options) => {
   pkg.description = description;
   pkg.scripts = {
     ...pkg.scripts,
+    ...(projectFeatures.includes('jest') && { test: 'jest' }),
   };
   pkg.devDependencies = {
     ...pkg.devDependencies,
     ...(projectFeatures.includes('jest') && { jest: '^29.7.0' }),
     ...(projectFeatures.includes('jest') && { '@types/jest': '^29.5.12' }),
     ...(projectFeatures.includes('jest') && { 'ts-jest': '^29.2.5' }),
+    ...(projectFeatures.includes('jest') && { '@testing-library/react': '^15.0.7' }),
+    ...(projectFeatures.includes('jest') && { '@testing-library/jest-dom': '^6.5.0' }),
+    ...(projectFeatures.includes('jest') && { '@testing-library/dom': '^10.4.0' }),
+    ...(projectFeatures.includes('jest') && { 'jest-environment-jsdom': '^29.7.0' }),
   };
 
   const deps = { ...pkg.devDependencies, ...pkg.dependencies };

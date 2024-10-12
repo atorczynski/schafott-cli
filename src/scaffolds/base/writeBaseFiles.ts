@@ -3,6 +3,7 @@ import { createDirectory, writeFile } from '../../utils/writeHelpers';
 import { prettierConfig } from '../../scaffolds/globals/prettier.scaffold';
 import { lintConfig } from '../../scaffolds/globals/eslint.scaffold';
 import { gitignore, jestConfig } from '../globals';
+import { ButtonTest, buttonTestCode } from '../react-lib/example-files/Button.test';
 
 export const writeBaseFiles = async (options: Options) => {
   const { projectFeatures } = options;
@@ -18,6 +19,6 @@ export const writeBaseFiles = async (options: Options) => {
   }
   if (projectFeatures.includes('jest')) {
     await writeFile('jest.config.js', jestConfig);
-    await writeFile('src/index.test.ts', 'test("Test", () => {\n  expect(true).toBe(true);\n});');
+    await writeFile('src/index.test.tsx', buttonTestCode);
   }
 };

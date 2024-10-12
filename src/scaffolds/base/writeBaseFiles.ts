@@ -3,7 +3,7 @@ import { createDirectory, writeFile } from '../../utils/writeHelpers';
 import { prettierConfig } from '../../scaffolds/globals/prettier.scaffold';
 import { lintConfig } from '../../scaffolds/globals/eslint.scaffold';
 import { gitignore, jestConfig } from '../globals';
-import { ButtonTest, buttonTestCode } from '../react-lib/example-files/Button.test';
+import { buttonTestCode } from '../react-lib/example-files/Button.test';
 
 export const writeBaseFiles = async (options: Options) => {
   const { projectFeatures } = options;

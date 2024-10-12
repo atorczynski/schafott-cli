@@ -58,6 +58,7 @@ Generates a scaffold for a React Component Library.
 - [x] [Prettier](https://github.com/prettier/prettier) (Code Formatter)
 - [x] [ESLint](https://github.com/eslint/eslint) (Code Linter)
 - [x] [Changesets](https://github.com/changesets/changesets) (Versioning)
+- [x] [Jest](https://github.com/jestjs/jest) (Testing) - Includes React Testing Library
 - [ ] [Storybook](https://github.com/storybookjs/storybook)  (Component Development)
 
 ### Predefined Scripts

@@ -1,5 +1,11 @@
 ## 1.1.1
 
+## 1.3.0
+
+### Minor Changes
+
+- bb76682: Add jest-dom tests.
+
 ## 1.2.1
 
 ### Patch Changes
